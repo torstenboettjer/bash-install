@@ -27,9 +27,9 @@ error() {
 #######################################
 install_python() {
   echo "Installing python"
-  USER=$(whoami)
+  #USER=$(whoami)
   echo $USER
-  echo $(logname)
+  echo $SUDO_USER
   #apt install -y build-essential
   #apt install -y libssl-dev
   #apt install -y libffi-dev
