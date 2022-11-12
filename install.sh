@@ -22,11 +22,18 @@ error() {
   exit 1
 }
 
+python() {
+  echo "installing python"
+  sudo apt-get install libffi-dev
+  exit 1
+}
+
 #######################################
 # Main
 #######################################
 main () {
   usage
+  python
   echo_header "All done"
 }
 
