@@ -32,9 +32,6 @@ install_python() {
   apt install -y libffi-dev
   apt install -y python3-pip
   PYTHON_VERSION=$(python3 --version)
-  su - $SUDO_USER -c "pip install --user virtualenv"
-  su - $SUDO_USER -c "pmkdir ~/.virtualenvs && cd ~/.virtualenvs"
-  su - $SUDO_USER -c "virtualenv -p python3 avaloq"
   echo "Installed $PYTHON_VERSION"
 }
 
