@@ -11,7 +11,7 @@ set -e
 #######################################
 update() {
   echo "Installing Developer Workspace"
-  apt-get update -y && apt-get upgrade -y
+  apt update -y && apt upgrade -y
 }
 
 #######################################
@@ -27,8 +27,8 @@ error() {
 #######################################
 install_python() {
   echo "Installing python"
-  apt-get install -y build-essential libssl-dev libffi-dev
-  apt-get install -y python3-pip
+  apt install -y build-essential libssl-dev libffi-dev
+  #apt install -y python3-pip
   PYTHON_VERSION=$(python3 --version)
   pip3 install --user virtualenvmkdir ~/.virtualenvs
   cd ~/.virtualenvs
@@ -38,7 +38,7 @@ install_python() {
 
 install_nano() {
   echo "Installing nano"
-  apt-get install -y nano
+  apt install -y nano
   NANO_VERSION=$(nano --version)
   echo "Installed $NANO_VERSION"
 }
