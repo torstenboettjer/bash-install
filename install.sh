@@ -43,6 +43,7 @@ nano() {
 #######################################
 main () {
   update
+  python
   echo "All done" && exit 1
 }
 
