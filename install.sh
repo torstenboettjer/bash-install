@@ -28,13 +28,13 @@ error() {
 python() {
   echo "Installing python"
   apt-get install libffi-dev
-  echo "Python: $(python --version"
+  echo "$(python --version"
 }
 
 nano() {
   echo "Installing nano"
   apt-get install nano
-  echo "Nano: $(nano --version"
+  echo "$(nano --version"
 }
 
 
