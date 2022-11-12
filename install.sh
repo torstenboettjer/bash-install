@@ -27,7 +27,8 @@ error() {
 #######################################
 install_python() {
   echo "Installing python"
-  apt-get install libffi-dev python3-pip
+  apt-get install libffi-dev 
+  apt-get install python3-pip
   PYTHON_VERSION=$(python3 --version)
   pip3 install --user virtualenvmkdir ~/.virtualenvs
   cd ~/.virtualenvs
