@@ -10,7 +10,7 @@ set -e
 # Print usage message and exit
 #######################################
 update() {
-  echo "Installing Dev Workspace"
+  echo "Installing Developer Workspace"
   apt-get update -y && apt-get upgrade -y
 }
 
@@ -22,10 +22,21 @@ error() {
   exit 1
 }
 
+#######################################
+# Install developer tools
+#######################################
 python() {
   echo "Installing python"
-  sudo apt-get install libffi-dev
+  apt-get install libffi-dev
+  echo "Python: $(python --version"
 }
+
+nano() {
+  echo "Installing nano"
+  apt-get install nano
+  echo "Nano: $(nano --version"
+}
+
 
 #######################################
 # Main
@@ -33,6 +44,7 @@ python() {
 main () {
   update
   python
+  nano
   echo "All done" && exit 1
 }
 
