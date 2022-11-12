@@ -28,7 +28,7 @@ error() {
 install_python() {
   echo "Installing python"
   apt install -y build-essential libssl-dev libffi-dev
-  #apt install -y python3-pip
+  apt install -y python3-pip
   PYTHON_VERSION=$(python3 --version)
   #pip3 install --user virtualenvmkdir ~/.virtualenvs
   #cd ~/.virtualenvs
