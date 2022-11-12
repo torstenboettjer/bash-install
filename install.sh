@@ -27,9 +27,9 @@ error() {
 #######################################
 install_python() {
   echo "Installing python"
-  apt-get install libffi-dev python3-dev python3-pip
+  apt-get install libffi-dev
   PYTHON_VERSION=$(python3 --version)
-  pip3 install --user virtualenvmkdir ~/.virtualenvs
+  python3-pip3 install --user virtualenvmkdir ~/.virtualenvs
   cd ~/.virtualenvs
   virtualenv -p python3.7 avaloq
   echo "Installed $PYTHON_VERSION"
