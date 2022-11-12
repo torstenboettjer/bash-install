@@ -36,7 +36,7 @@ nano() {
   echo "Installing nano"
   apt-get install nano
   NANO_VERSION=$(nano --version)
-  echo "Installed NANO_VERSION"
+  echo "Installed $NANO_VERSION"
 }
 
 
