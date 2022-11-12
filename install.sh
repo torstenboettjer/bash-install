@@ -27,6 +27,8 @@ error() {
 #######################################
 install_python() {
   echo "Installing python"
+  USER=$(whoami)
+  echo $USER
   apt install -y build-essential
   apt install -y libssl-dev
   apt install -y libffi-dev
@@ -34,8 +36,8 @@ install_python() {
   echo "Installed pip"
   PYTHON_VERSION=$(python3 --version)
   pip install --user virtualenv
-  mkdir ~/.virtualenvs && cd ~/.virtualenvs
-  virtualenv -p python3 avaloq
+  #mkdir ~/.virtualenvs && cd ~/.virtualenvs
+  #virtualenv -p python3 avaloq
   echo "Installed $PYTHON_VERSION"
 }
 
