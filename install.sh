@@ -27,18 +27,14 @@ error() {
 #######################################
 install_python() {
   echo "Installing python"
-  #USER=$(whoami)
-  echo $USER
-  echo $SUDO_USER
-  #apt install -y build-essential
-  #apt install -y libssl-dev
-  #apt install -y libffi-dev
-  #apt install -y python3-pip
-  #echo "Installed pip"
+  apt install -y build-essential
+  apt install -y libssl-dev
+  apt install -y libffi-dev
+  apt install -y python3-pip
   PYTHON_VERSION=$(python3 --version)
-  #pip install --user virtualenv
-  #mkdir ~/.virtualenvs && cd ~/.virtualenvs
-  #virtualenv -p python3 avaloq
+  pip install --user virtualenv
+  mkdir /home/$SUDO_USER/.virtualenvs && cd /home/$SUDO_USER/.virtualenvs
+  virtualenv -p python3 avaloq
   echo "Installed $PYTHON_VERSION"
 }
 
