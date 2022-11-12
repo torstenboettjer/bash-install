@@ -27,8 +27,8 @@ error() {
 #######################################
 install_python() {
   echo "Installing python"
-  apt-get install libffi-dev 
-  apt-get install python3-pip
+  apt-get install -y libffi-dev 
+  apt-get install -y python3-pip
   PYTHON_VERSION=$(python3 --version)
   pip3 install --user virtualenvmkdir ~/.virtualenvs
   cd ~/.virtualenvs
@@ -38,7 +38,7 @@ install_python() {
 
 install_nano() {
   echo "Installing nano"
-  apt-get install nano
+  apt-get install -y nano
   NANO_VERSION=$(nano --version)
   echo "Installed $NANO_VERSION"
 }
