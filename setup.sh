@@ -42,6 +42,13 @@ install_nano() {
   echo "Installed $NANO_VERSION"
 }
 
+install_psql() {
+  echo "Installing PostgreSQL"
+  apt install postgresql postgresql-contrib
+  PSQL_VERSION=$(psql --version)
+  echo "Installed $PSQL_VERSION"
+}
+
 #######################################
 # Main
 #######################################
@@ -49,6 +56,7 @@ main () {
   update
   install_python
   install_nano
+  install_psql
   echo "All done" && exit 1
 }
 
