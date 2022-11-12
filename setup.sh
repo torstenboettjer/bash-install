@@ -64,7 +64,7 @@ install_terraform() {
     tee /etc/apt/sources.list.d/hashicorp.list
   apt update
   apt install terraform
-  TF_VERSION=$(terraform –version)
+  TF_VERSION=$(terraform –v)
   echo "Installed $TF_VERSION"
 }
 
