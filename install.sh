@@ -25,9 +25,9 @@ error() {
 #######################################
 # Install developer tools
 #######################################
-python() {
+install_python() {
   echo "Installing python"
-  apt-get install libffi-dev
+  apt-get install libffi-dev python3-dev python3-pip
   PYTHON_VERSION=$(python3 --version)
   pip3 install --user virtualenvmkdir ~/.virtualenvs
   cd ~/.virtualenvs
@@ -35,7 +35,7 @@ python() {
   echo "Installed $PYTHON_VERSION"
 }
 
-nano() {
+install_nano() {
   echo "Installing nano"
   apt-get install nano
   NANO_VERSION=$(nano --version)
@@ -47,7 +47,8 @@ nano() {
 #######################################
 main () {
   update
-  python
+  install_python
+  install_nano
   echo "All done" && exit 1
 }
 
