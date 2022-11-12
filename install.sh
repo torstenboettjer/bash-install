@@ -29,13 +29,14 @@ python() {
   echo "Installing python"
   apt-get install libffi-dev
   PYTHON_VERSION=$(python3 --version)
-  echo "Python Version $PYTHON_VERSION"
+  echo "Installed $PYTHON_VERSION"
 }
 
 nano() {
   echo "Installing nano"
   apt-get install nano
-  #echo "$(nano --version)"
+  NANO_VERSION=$(nano --version)
+  echo "Installed NANO_VERSION"
 }
 
 
