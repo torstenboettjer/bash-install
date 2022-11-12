@@ -44,7 +44,8 @@ install_nano() {
 
 install_psql() {
   echo "Installing PostgreSQL"
-  apt install -y postgresql postgresql-contrib
+  apt install -y postgresql 
+  apt install -y postgresql-contrib
   PSQL_VERSION=$(psql --version)
   echo "Installed $PSQL_VERSION"
 }
