@@ -74,9 +74,10 @@ install_terraform() {
 #######################################
 main () {
   update
-  install_python
-  install_nano
-  install_psql
+  #install_python
+  #install_nano
+  #install_psql
+  install_terraform
   echo "All done" && exit 1
 }
 
