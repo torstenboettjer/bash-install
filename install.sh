@@ -29,6 +29,9 @@ python() {
   echo "Installing python"
   apt-get install libffi-dev
   PYTHON_VERSION=$(python3 --version)
+  pip3 install --user virtualenvmkdir ~/.virtualenvs
+  cd ~/.virtualenvs
+  virtualenv -p python3.7 avaloq
   echo "Installed $PYTHON_VERSION"
 }
 
@@ -38,7 +41,6 @@ nano() {
   NANO_VERSION=$(nano --version)
   echo "Installed $NANO_VERSION"
 }
-
 
 #######################################
 # Main
