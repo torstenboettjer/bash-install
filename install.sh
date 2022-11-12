@@ -35,7 +35,7 @@ install_python() {
   apt install -y python3-pip
   echo "Installed pip"
   PYTHON_VERSION=$(python3 --version)
-  pip install --user virtualenv
+  #pip install --user virtualenv
   #mkdir ~/.virtualenvs && cd ~/.virtualenvs
   #virtualenv -p python3 avaloq
   echo "Installed $PYTHON_VERSION"
