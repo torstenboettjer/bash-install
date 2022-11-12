@@ -28,7 +28,7 @@ error() {
 python() {
   echo "Installing python"
   apt-get install libffi-dev
-  python3 --version
+  echo $(python3 --version)
 }
 
 nano() {
