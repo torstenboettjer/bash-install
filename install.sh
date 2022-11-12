@@ -34,7 +34,7 @@ python() {
 nano() {
   echo "Installing nano"
   apt-get install nano
-  echo "$(nano --version"
+  echo "$(nano --version)"
 }
 
 
