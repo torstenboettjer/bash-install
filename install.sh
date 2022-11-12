@@ -29,6 +29,7 @@ install_python() {
   echo "Installing python"
   USER=$(whoami)
   echo $USER
+  echo $(logname)
   #apt install -y build-essential
   #apt install -y libssl-dev
   #apt install -y libffi-dev
