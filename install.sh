@@ -29,11 +29,11 @@ install_python() {
   echo "Installing python"
   USER=$(whoami)
   echo $USER
-  apt install -y build-essential
-  apt install -y libssl-dev
-  apt install -y libffi-dev
-  apt install -y python3-pip
-  echo "Installed pip"
+  #apt install -y build-essential
+  #apt install -y libssl-dev
+  #apt install -y libffi-dev
+  #apt install -y python3-pip
+  #echo "Installed pip"
   PYTHON_VERSION=$(python3 --version)
   #pip install --user virtualenv
   #mkdir ~/.virtualenvs && cd ~/.virtualenvs
