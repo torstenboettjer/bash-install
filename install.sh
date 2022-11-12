@@ -9,9 +9,9 @@ set -e
 #######################################
 # Print usage message and exit
 #######################################
-usage() {
-  echo "\tInstalling Dev Workspace"
-  exit 1
+update() {
+  echo "Installing Dev Workspace"
+  apt-get update -y && apt-get upgrade -y
 }
 
 #######################################
@@ -23,18 +23,17 @@ error() {
 }
 
 python() {
-  echo "installing python"
+  echo "Installing python"
   sudo apt-get install libffi-dev
-  exit 1
 }
 
 #######################################
 # Main
 #######################################
 main () {
-  usage
+  update
   python
-  echo_header "All done"
+  echo "All done" && exit 1
 }
 
 main "$@"
